@@ -1,0 +1,34 @@
+<!--<ion-view hide-nav-bar="true">
+    <ion-header-bar class="new-status-bar bar-positive">
+        <div class="buttons">
+            <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+        </div>
+        <h1 class="title">Redeem Point</h1>
+
+    </ion-header-bar>-->
+<ion-view view-title="Redeem Point" hide-back-button="true">
+
+    <ion-content>
+        <div class="row blue-color  tab tabs-color-light">
+            <div class=" tab-item active col-50 text-center blue-color" ng-click="switchTab('All Posts')">
+                <span class="ion-document-text"
+                      ng-class="{'tab-active':allPostsTab == true, 'tab-normal':allPostsTab == false}">&nbsp;&nbsp;Tab 1</span>
+            </div>
+            <div class=" tab-item col-50 text-center blue-color" ng-click="switchTab('All Photos')">
+                <span class="ion-images " ng-class="{'tab-active':allPohots == true, 'tab-normal':allPohots == false}">&nbsp;&nbsp;Tab 2</span>
+            </div>
+        </div>
+
+        <div ng-if="allPostsTab == true" class="">
+
+            Tab 1
+
+        </div>
+
+        <div ng-if="allPohots == true" class="">
+
+            Tab 2
+
+        </div>
+    </ion-content>
+</ion-view>

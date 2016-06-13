@@ -1,0 +1,77 @@
+<ion-view view-title="login">
+    <ion-content align="center">
+        <img src="img/logo.png" class="login_logo_img">
+
+        <p class="login_name">LOGIN</p>
+
+        <div align="center">
+
+            <div class="login_screen_field_div row" align="bottom">
+
+                <div class="Aligner col-20"><!--<input type="email" placeholder="Passing Year" class="input_filed">-->
+
+
+                    <select ng-model="status_post" class="width-100-per white_bg_color border-0-px placeholder-color" ng-options="toData as toData.category for toData in to" ng-change="selectedStatusCategory(status_post.id)">
+                    </select>
+
+
+                </div>
+
+
+                <div class="Aligner"><input type="number" placeholder="Phone number" class="input_filed" limit-to="10" ng-model="loginUserData.mobileNumber"></div>
+            </div>
+
+
+            <div class="login_screen_field_div" align="center">
+                <div class="login_screen_field_img_div field_icon_div"><i
+                        class="login_screen_field_img icon  ion-ios-locked-outline white-txt-color font-25"></i></div>
+                <div class="Aligner"><input type="password" placeholder="Password" class="input_filed" ng-model="loginUserData.password"></div>
+            </div>
+
+
+            <div class="password_div">
+                <span class="item-note forgot_passwrd_txt" ng-click="forgotPassword()">Forgot your password ?</span>
+            </div>
+
+
+            <div class="width-80-per">
+                <button class="button button-full button-positive" ng-click="home()">
+                    Sign In
+                </button>
+                <button class="button button-full button-dark signUp-btn " ng-click="register()">
+                    New to PupilSky ? SIGNUP
+                </button>
+            </div>
+
+
+            <div class="row Aligner margin-top-20-px margin-bottom-20-px width-90-per" >
+                <hr size="5" color="cornflowerblue" class="width-100-per" >
+                <span style="width: 100%;color: cornflowerblue">Or Sign in with</span>
+                <hr size="5" color="cornflowerblue" class="width-100-per">
+            </div>
+
+
+        </div>
+
+
+    </ion-content>
+
+    <ion-footer-bar style="background-color: #ffffff !important;padding: 0px ! important;">
+        <div class="row padding-0-px"
+             style="border: solid 1px;border-bottom: 0px;border-right: 0px;border-left: 0px;border-color: gray">
+            <div class="col-50 text-center col-center">
+                <i class="login_screen_field_img ion-social-facebook app_txt_color fb-color font-20 padding-0-px"> </i>
+                <span>FaceBook</span>
+
+            </div>
+            <div class="footer_social_btn"></div>
+            <div class="col-50 text-center col-center">
+                <i class="login_screen_field_img ion-social-google app_txt_color google-color font-20 padding-0-px"></i>
+                <span> Google</span>
+            </div>
+
+        </div>
+
+
+    </ion-footer-bar>
+</ion-view>

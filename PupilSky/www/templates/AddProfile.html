@@ -1,0 +1,71 @@
+<ion-view view-title="Manage Profile" hide-nav-bar="true">
+
+  <ion-header-bar class="new-status-bar bar-positive">
+    <div class="buttons">
+      <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+    </div>
+
+  </ion-header-bar>
+
+    <ion-content>
+
+        <div class="margin-top-10-px" ng-if="profileCreate == true">
+            <p class="margin-left-10-px">Create Profile</p>
+            <hr>
+        </div>
+
+        <div class="Aligner margin-0-px margin-top-10-px">
+            <div align="center" class="col col-33">
+                <img src="img/student_profile_icon.png" class="width-100-per" ng-click="createStudentProfile()">
+                <br>
+                <span class="green-txt-color font-bold">Student</span>
+            </div>
+            <div align="center" class="col col-33" ng-click="createProfile()">
+                <img src="img/teacher_profile_icon.png" class="width-100-per">
+                <br>
+                <span class="blue-txt-color font-bold">Teacher</span>
+            </div>
+            <div align="center" class="col col-33" ng-click="createInstituteProfile()">
+                <img src="img/institute_profile_icon.png" class="width-100-per">
+                <br>
+                <span class="orange-txt-color font-bold">Institute</span>
+            </div>
+        </div>
+
+        <div ng-if="isProfilesExists == false">
+            <div class="Aligner" style="width: 100%;height: 100%;justify-content: center; margin-top: 80px">
+                <div class="Aligner"
+                     style="width: 150px;height: 150px;border-radius: 150px;background-color: gainsboro;justify-content: center">
+                    <i class="icon ion-ios-list white-txt-color" style="font-size: 100px;"></i>
+                </div>
+            </div>
+            <div align="center" class="font-25 font-bold margin-top-20px gray-txt-color"><span>Create Profile</span>
+            </div>
+        </div>
+
+        <div ng-if="isProfilesExists == true">
+
+        <div class="margin-top-20-px">
+            <hr>
+            <p class="margin-left-10-px">My Profiles</p>
+            <hr>
+        </div>
+
+
+
+                <div class=" list" style="padding-top: 0px;margin-top: -8px">
+
+                  <div ng-repeat="index in profiles_created_stu">
+                    <a class="item item-thumbnail-left" style="padding-top: 18px;min-height: 60px;padding-left: 60px">
+                        <img src="img/student_profile_icon.png" style="width: 40px;height:40px;">
+                        <p>{{index.firstName}}</p>
+                    </a>
+
+                  </div>
+
+                </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>

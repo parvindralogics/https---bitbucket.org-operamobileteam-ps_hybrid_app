@@ -1,0 +1,80 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="new-status-bar bar-positive">
+        <div class="buttons">
+            <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+        </div>
+        <h1 class="title">Add Course</h1>
+
+    </ion-header-bar>
+    <ion-content>
+        <div align="center">
+
+            <div class="field_screen" align="left">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">Course Name</span>
+                    <input type="text" placeholder="Course Name" class="padding-right-5px" ng-model="addCourseDetails.courseName">
+                </label>
+
+            </div>
+
+            <div class="field_screen" align="left">
+
+                <select class="width-100-per white_bg_color border-0-px " ng-model="addCourseDetails.duration">
+
+                  <option value="" selected="selected">Duration</option>
+                    <option>week</option>
+                    <option>Month</option>
+                    <option>year</option>
+                </select>
+
+            </div>
+
+            <div class="field_screen" align="left">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">Total seat</span>
+                    <input type="number" placeholder="Total seat" maxlength="3" class="padding-right-5px" ng-model="addCourseDetails.totalSeat">
+                </label>
+
+            </div>
+
+            <div class="field_screen" align="left">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">Course Fee</span>
+                    <input type="number" placeholder="Course Fee" class="padding-right-5px" ng-model="addCourseDetails.courseFee">
+                </label>
+
+            </div>
+
+            <div class="field_screen" align="left">
+
+                <select class="width-100-per white_bg_color border-0-px " ng-model="addCourseDetails.timeSlot">
+                    <option value="" selected="selected">Time Slot</option>
+                    <option>week</option>
+                    <option>Month</option>
+                    <option>year</option>
+                </select>
+
+            </div>
+
+            <div class="field_screen" align="left">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">About me</span>
+                    <textarea aria-multiline="10" placeholder="About me" class="padding-right-5px " ng-model="addCourseDetails.aboutMe"></textarea>
+                </label>
+            </div>
+
+        </div>
+    </ion-content>
+
+    <ion-footer-bar
+            style="background-color: #ffffff !important;padding: 0px ! important;background-position:center;border-top-width: 0px !important;">
+        <div class="row" style="padding:0px;border: 0px !important;display: -webkit-box;" ng-click="next()">
+            <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+                <span class="white-txt-color font-15">Next</span>
+            </div>
+        </div>
+
+
+    </ion-footer-bar>
+
+</ion-view>

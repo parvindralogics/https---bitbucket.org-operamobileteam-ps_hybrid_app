@@ -1,0 +1,66 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="new-status-bar bar-positive">
+        <div class="buttons">
+            <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+        </div>
+        <h1 class="title">Institute Profile Info</h1>
+
+    </ion-header-bar>
+
+
+    <ion-content>
+        <div align="center">
+
+            <div class="field_screen " align="center">
+                <div class="Aligner padding-top padding-bottom"><select ng-model="stateData_post"
+                                                                        class="width-100-per white_bg_color border-0-px "
+                                                                        ng-options="toData as toData.state for toData in stateData"
+                                                                        ng-change="selectedStatusCategory(stateData_post.state)">
+                </select></div>
+            </div>
+
+
+            <div class="field_screen" align="center">
+                <div class="Aligner padding-top padding-bottom"><select ng-model="cityData_post"
+                                                                        class="width-100-per white_bg_color border-0-px "
+                                                                        ng-options="toData as toData.city for toData in cityData"
+                                                                        ng-change="selectedStatusCategory(cityData_post.city)">
+                </select></div>
+            </div>
+
+
+            <div class="field_screen" align="center">
+                <div class="Aligner" style="padding-top: 8px;padding-bottom: 8px"><select ng-model="locationData_post"
+                                                                                          class="width-100-per white_bg_color border-0-px"
+                                                                                          ng-options="toData as toData.location for toData in locationData"
+                                                                                          ng-change="selectedStatusCategory(locationData.location)">
+                </select></div>
+            </div>
+
+
+            <div class="field_screen" align="left">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">Street Address(optional)</span>
+                    <textarea aria-multiline="10" placeholder="Street Address(optional)"
+                              class="padding-right-5px "></textarea>
+                </label>
+            </div>
+
+
+        </div>
+
+    </ion-content>
+
+    <ion-footer-bar
+            class="footer-btn-bar">
+        <div class="row footer-btn-div"  ng-click="next()">
+            <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+                <span class="white-txt-color font-15">Next</span>
+            </div>
+        </div>
+
+
+    </ion-footer-bar>
+
+</ion-view>
+

@@ -1,0 +1,94 @@
+<ion-view hide-nav-bar="true">
+
+    <ion-header-bar class="new-status-bar bar-positive">
+        <div class="buttons">
+            <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+        </div>
+        <h1 class="title">Location</h1>
+    </ion-header-bar>
+
+    <ion-content>
+      <div align="center">
+          <!-- <div class="login_screen_field_div " align="center" >
+             <div class="Aligner" style="padding-top: 8px;padding-bottom: 8px"><select  ng-model="stateData_post" class="width-100-per white_bg_color border-0-px placeholder-color" ng-options="toData as toData.state for toData in stateData" ng-change="selectedStatusCategory(stateData_post.state)">
+             </select></div>
+         </div>-->
+
+
+            <div class="field_screen " align="center" >
+
+              <div class="Aligner padding-top padding-bottom">
+                <select class="width-100-per white_bg_color border-0-px " ng-model="state_model.id" ng-options="state.id as state.name for state in statesData"
+                        ng-change = "selectState()">
+
+                  <option value="" selected="selected">Select State</option>
+                </select>
+              </div>
+            </div>
+      </div>
+
+
+      <div align="center">
+          <div class="field_screen" align="center" >
+            <div class="Aligner padding-top padding-bottom">
+              <select class="width-100-per white_bg_color border-0-px " ng-model="city_model.id" ng-options="city.id as city.name for city in cityData"
+                      ng-change = "selectCity()">
+
+                <option value="" selected="selected">Select City</option>
+              </select>
+            </div>
+          </div>
+</div>
+
+      <div align="center">
+          <div class="field_screen" align="center" >
+
+            <div class="Aligner padding-top padding-bottom">
+              <select class="width-100-per white_bg_color border-0-px " ng-model="area_model.id" ng-options="area.id as area.name for area in areaData"
+                      ng-change = "selectArea()">
+
+                <option value="" selected="selected">Select Location</option>
+              </select>
+            </div>
+
+          </div>
+      </div>
+<!--
+            <div class="login_screen_field_div" align="center">
+                <div class="Aligner"><textarea  placeholder="Street Address(optional)" class="input_filed padding-top"></textarea></div>
+            </div>-->
+
+          <!--  <div class="login_screen_field_div" align="left">
+                <label class="item item-input item-floating-label item-borderless " style="height: 50px;width: 100%;padding: 0px 0px 0px 5px !important;margin-bottom: 5px">
+                    <span class="input-label app_txt_color">Street Address(optional)</span>
+                    <textarea  placeholder="Street Address(optional)" class="input_filed" style="padding-right: 5px !important;"></textarea>
+                </label>
+            </div>-->
+      <div align="center">
+
+          <div class="field_screen" align="center">
+              <label class="item item-input item-floating-label item-borderless width-100-per input_field_label" >
+                  <span class="input-label app_txt_color input-label-txt-font">Street Address(optional)</span>
+                  <textarea  aria-multiline="10" placeholder="Street Address(optional)" class="padding-right-5px " ng-model="studAddress.address_txt"></textarea>
+              </label>
+          </div>
+
+        </div>
+
+       <!-- <div align="center">
+            <button class="button button-full button-positive" style="width: 50%!important;border-radius: 4px !important;" ng-click="next()">Next
+            </button>
+        </div>-->
+
+    </ion-content>
+    <ion-footer-bar class="footer-btn-bar" >
+        <div class="row footer-btn-div" ng-click="next()">
+            <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+                <span class="white-txt-color font-15">Next</span>
+            </div>
+        </div>
+
+
+    </ion-footer-bar>
+</ion-view>
+

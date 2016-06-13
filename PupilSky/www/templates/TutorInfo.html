@@ -1,0 +1,118 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="new-status-bar bar-positive">
+        <div class="buttons">
+            <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+        </div>
+        <h1 class="title">Teacher Information</h1>
+
+    </ion-header-bar>
+
+    <ion-content>
+
+        <div align="center">
+
+          <div class="field_screen " align="center">
+
+            <div class="Aligner padding-top padding-bottom" ng-click="openCoursesModal()">
+
+              <button type="text" class="button_selcourses" > Select Courses</button>
+
+            </div>
+
+          </div>
+
+          <ion-list>
+
+            <ion-item ng-if="totalSelectedCourseName.length > 0" class="txt_selsubhead">
+              Selected Courses
+            </ion-item>
+            <!--  -->
+            <ion-item ng-repeat="item in totalSelectedCourseName" class="txt_selcourses">
+              {{ item }}
+            </ion-item>
+
+          </ion-list>
+
+              <div class="field_screen " align="center">
+
+                <div class="Aligner padding-top padding-bottom" ng-click="openSubjectsModal()">
+
+                  <button type="text" class="button_selcourses" > Select Subject</button>
+
+                </div>
+              </div>
+
+              <ion-list>
+
+                <ion-item ng-if="totalSelectedSubName.length > 0" class="txt_selsubhead">
+                  Selected Courses
+                </ion-item>
+                <!--  -->
+                <ion-item ng-repeat="item in totalSelectedSubName" class="txt_selcourses">
+                  {{ item }}
+                </ion-item>
+
+              </ion-list>
+
+          <div class="field_screen_noborder " align="center">
+                <div align="left">Select Tution</div>
+          </div>
+
+                <ion-list align="left" class="list-borderless">
+                    <ion-checkbox ng-model="tutorInfoHome.checked" ng-click="setHomeCharge()">Home Tution</ion-checkbox>
+                </ion-list>
+
+
+                <div class=" field_screen row" style="padding: 0px!important;" align="center">
+                    <div class="Aligner col col-40"><input type="number" placeholder="Amount" ng-model="tutorInfoTwoObj.amountHomeTu" ></div>
+                    <select class="width-100-per border-0-px  white_bg_color col col-60" ng-model="tutorInfoTwoObj.homePayType">
+
+                      <option value="" selected="selected">month/hours</option>
+                        <option>Month</option>
+                        <option>Hours</option>
+                    </select>
+
+                </div>
+          <div class="field_screen_noborder " align="center">
+                <div align="left">Select Group Tutor</div>
+            </div>
+
+                <ion-list align="left" class="list-borderless">
+                    <ion-checkbox ng-model="tutorInfoGroup.checked" ng-click="setGroupCharge()">Group Tution</ion-checkbox>
+                </ion-list>
+                <div class=" field_screen row" style="padding: 0px!important;" align="center">
+                    <div class="Aligner col col-40"><input type="number" placeholder="Amount" ng-model="tutorInfoTwoObj.amountGroupTu" ></div>
+                    <select class="width-100-per border-0-px  white_bg_color col col-60" ng-model="tutorInfoTwoObj.groupPayType">
+
+                        <option value="" selected="selected">month/hours</option>
+                        <option>Month</option>
+                        <option>Hours</option>
+                    </select>
+
+                </div>
+
+                <ion-list align="left" class="list-borderless">
+                    <ion-checkbox ng-model="tutorInfoFree.checked" ng-click="setFreeCharge()">Free trial class</ion-checkbox>
+                </ion-list>
+
+
+            <div class="field_screen" align="left">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">About me</span>
+                    <textarea aria-multiline="10" placeholder="About me" class="padding-right-5px" ng-model="tutorInfoTwoObj.aboutTutor"></textarea>
+                </label>
+            </div>
+
+
+        </div>
+
+    </ion-content>
+    <ion-footer-bar
+            class="footer-btn-bar">
+        <div class="row footer-btn-div"  ng-click="postTutorInfo()">
+            <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+                <span class="white-txt-color font-15">Next</span>
+            </div>
+        </div>
+    </ion-footer-bar>
+</ion-view>

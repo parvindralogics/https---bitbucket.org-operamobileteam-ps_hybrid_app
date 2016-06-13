@@ -1,0 +1,114 @@
+<ion-view view-title="login">
+  <ion-content class="white_bg_color" align="center">
+    <img src="img/logo.png" class="login_logo_img">
+    <p class="login_name">REGISTER</p>
+    <div align="center">
+      <!--<div class="login_screen_field_div" align="center">
+        <div class="login_screen_field_img_div"><img src="img/user_icon.png" class="login_screen_field_img"></div>
+        <div class="Aligner"><input type="text" placeholder="FirstName" class="input_filed" ></div>
+      </div>-->
+      <div class="field_screen" align="left">
+          <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+              <span class="input-label app_txt_color input-label-txt-font">Name</span>
+              <input type="text" placeholder="Name" class="padding-right-5px" ng-model="UserData.userName">
+          </label>
+       <!-- <div class="login_screen_field_img_div field_icon_div"><i
+          class="login_screen_field_img icon  ion-person white-txt-color font-25" ></i></div>
+        <div class="Aligner"><input type="email" placeholder="First name" class="input_filed"></div>-->
+      </div>
+
+        <div class="field_screen" align="left">
+            <label class="item item-input item-floating-label item-borderless width-100-per input_field_label" >
+                <span class="input-label app_txt_color input-label-txt-font">Email</span>
+                <input type="Email" placeholder="Email" class="padding-right-5px" ng-model="UserData.userEmail">
+            </label>
+        </div>
+
+        <div class="field_screen" align="left">
+            <label class="item item-input item-floating-label item-borderless width-100-per input_field_label " >
+                <span class="input-label app_txt_color input-label-txt-font">Phone Number</span>
+                <input type="number" placeholder="Phone Number" class="padding-right-5px " limit-to="10"  ng-model="UserData.userPhoneNumber">
+            </label>
+        </div>
+
+        <div class="field_screen" align="left">
+            <label class="item item-input item-floating-label item-borderless width-100-per input_field_label" >
+                <span class="input-label app_txt_color input-label-txt-font" >Password</span>
+                <input type="password" placeholder="Password" class="padding-right-5px " ng-model="UserData.userPassword">
+            </label>
+        </div>
+
+      <!--<div class="login_screen_field_div" align="center">
+        <div class="login_screen_field_img_div field_icon_div"><i
+          class="login_screen_field_img icon  ion-person white-txt-color font-25" ></i></div>
+        <div class="Aligner"><input type="email" placeholder="Last name" class="input_filed"></div>
+      </div>
+
+      <div class="login_screen_field_div" align="center">
+        <div class="login_screen_field_img_div field_icon_div"><i
+          class="login_screen_field_img icon ion-ios-email-outline white-txt-color font-25" ></i></div>
+        <div class="Aligner"><input type="email" placeholder="Email" class="input_filed"></div>
+      </div>
+
+      <div class="login_screen_field_div1" align="center">
+        <div class="login_screen_field_img_div field_icon_div"><i
+          class="login_screen_field_img icon ion-iphone white-txt-color font-25" ></i></div>
+        <div class="Aligner"><input type="number" placeholder="Phone number" class="input_filed"></div>
+      </div>
+
+      <div class="login_screen_field_div" align="center">
+        <div class="login_screen_field_img_div field_icon_div"><i
+          class="login_screen_field_img icon  ion-ios-locked-outline white-txt-color font-25" ></i></div>
+        <div class="Aligner"><input type="password" placeholder="Password"  class="input_filed"></div>
+      </div>
+
+      <div class="login_screen_field_div" align="center">
+        <div class="login_screen_field_img_div field_icon_div"><i
+          class="login_screen_field_img icon  ion-ios-locked-outline white-txt-color font-25" ></i></div>
+        <div class="Aligner"><input type="password" placeholder="Re-password"  class="input_filed"></div>
+      </div>-->
+
+
+     <!-- <div class="password_div">
+      <i class="icon ion-android-checkbox-outline-blank check_box"></i>
+        <span class="terms_cnd_txt" ng-click="termsConditionshow()">Terms & Conditions</span>
+        <span class="item-note login_txt" ng-click="login()">Login</span>
+      </div>-->
+
+        <div >
+            <div align="center"  style="display: block;position: relative;width: 90%">
+                <ion-checkbox class="item-borderless" ng-model="UserData.termsCondtionChecked" style="width: 50px;padding-left: 0px;float: left;text-align: -webkit-auto;"></ion-checkbox>
+                <span class="terms_cnd_txt" ng-click="termsConditionshow()" style="padding-top:5px">Terms & Conditions</span>
+                <span class="item-note login_txt" ng-click="login()" style="padding-top:5px">Login</span>
+            </div>
+        </div>
+      <br>
+     <!-- <button class="button button-full button-positive signin_btn submit_btn">
+        Submit
+      </button>-->
+
+
+    <!--  <div class="row Aligner" style="width: 90%;margin-top: 40px;margin-bottom: 40px">
+        <hr size="5" color="cornflowerblue" style="width: 100%;"><span style="width: 100%;color: cornflowerblue">Or Sign in with</span><hr size="5" color="cornflowerblue" style="width: 100%;">
+      </div>-->
+
+
+    </div>
+
+   <!-- <div class="text-center social_icon_div">
+      <img src="img/fb_icon.png" class="fb_icon">
+      <img src="img/google_icon.png" class="google_icon">
+    </div>-->
+
+  </ion-content>
+
+    <ion-footer-bar style="background-color: #ffffff !important;padding: 0px ! important;background-position:center;border-top-width: 0px !important;">
+        <div class="row" style="padding:0px;border: 0px !important;display: -webkit-box;" ng-click="submit()">
+            <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+                <span class="white-txt-color font-15">Submit</span>
+            </div>
+        </div>
+
+
+    </ion-footer-bar>
+</ion-view>

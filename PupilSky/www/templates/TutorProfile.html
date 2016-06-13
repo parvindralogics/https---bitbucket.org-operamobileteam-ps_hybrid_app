@@ -1,0 +1,115 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="new-status-bar bar-positive">
+        <div class="buttons">
+            <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+        </div>
+        <h1 class="title">Teacher Information</h1>
+
+    </ion-header-bar>
+
+    <ion-content>
+
+        <div align="center">
+
+            <div class="field_screen" align="left">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">Name</span>
+                    <input type="text" placeholder="Name" class="padding-right-5px" ng-model="teacherInfo.teachName">
+                </label>
+
+            </div>
+
+            <div class="field_screen" align="left" style="margin: 0px !important;">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">Date of Birth</span>
+                    <input type="text" placeholder="dd-mm-yyyy" onfocus="(this.type='date')" class="padding-right-5px" ng-model="teacherInfo.teacDOB">
+                </label>
+
+            </div>
+
+
+            <div class="field_screen" align="left">
+
+                <select class="width-100-per white_bg_color border-0-px" ng-model="teacherInfo.gender">
+                  <option value="" selected="selected">Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+
+            </div>
+
+
+          <div class="field_screen " align="center">
+
+            <div class="Aligner padding-top padding-bottom">
+              <select class="width-100-per white_bg_color border-0-px " ng-model="model.id" ng-options="course.id as course.name for course in studentCourseData"
+                     >
+                <option value="" selected="selected">Highest Qualification</option>
+              </select>
+            </div>
+
+          </div>
+
+
+          <div class="field_screen " align="center">
+
+            <div class="Aligner padding-top padding-bottom">
+              <select class="width-100-per white_bg_color border-0-px " ng-model="modelUniv.id" ng-options="university.id as university.name for university in universityData"
+                     >
+                <option value="" selected="selected">University</option>
+              </select>
+            </div>
+
+          </div>
+
+
+
+            <div class="field_screen" align="left">
+                <select class="width-100-per white_bg_color border-0-px " ng-model="teacherInfo.teacPasYear">
+                  <option value="" selected="selected">Passing Year</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                    <option>2014</option>
+                    <option>2013</option>
+                    <option>2012</option>
+                    <option>2011</option>
+                    <option>2010</option>
+                    <option>2009</option>
+                    <option>2008</option>
+                    <option>2007</option>
+                    <option>2006</option>
+                </select>
+            </div>
+
+
+            <div class="field_screen" align="left" style="margin: 0px !important;">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">Identity Type</span>
+                    <input type="text" placeholder="Identity Type" class="padding-right-5px"  ng-model="teacherInfo.teacIdentityType">
+                </label>
+
+            </div>
+
+            <div class="field_screen" align="left" style="margin: 0px !important;">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">Identity Value</span>
+                    <input type="text" placeholder="Identity Value" class="padding-right-5px"  ng-model="teacherInfo.teacIdentityValue">
+                </label>
+
+            </div>
+
+
+        </div>
+
+    </ion-content>
+    <ion-footer-bar
+            class="footer-btn-bar">
+        <div class="row footer-btn-div"  ng-click="next()">
+            <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+                <span class="white-txt-color font-15">Next</span>
+            </div>
+        </div>
+
+
+    </ion-footer-bar>
+</ion-view>

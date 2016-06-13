@@ -1,0 +1,481 @@
+/* Empty. Add your own CSS if you like */
+
+.app_bg_field_color{
+  border-color:cornflowerblue ;
+}
+.app_txt_color{
+  color: cornflowerblue;
+}
+.app-bg-theme{
+  background-color: cornflowerblue;
+}
+.fb-color{
+  color: #3A5BA2;
+}
+.google-color{
+  color: #E1584B;
+}
+.green_color{
+  background-color: #1EBE16;
+}
+.blue-color{
+  background-color: #672F90;
+}
+
+
+.tab-active{
+    color: #ffffff;
+}
+
+.tab-normal{
+    color: #bababa;
+}
+
+.orange-color{
+  background-color: #F68408;
+}
+.green-txt-color{
+  color: #1EBE16 !important;
+}
+.blue-txt-color{
+  color: #672F90;
+}
+.orange-txt-color{
+  color: #F68408;
+}
+
+.bar-stable .button.button-clear{
+  color: #fff!important;
+}
+
+.title{
+  color: #ffffff!important;
+}
+
+.white-txt-color{
+  color: white!important;
+}
+.white_bg_color{
+  background-color: white !important;
+}
+
+/*font size css*/
+.font-25{
+  font-size: 25px !important;
+}
+.font-15{
+    font-size: 15px !important;
+}
+.font-20{
+    font-size: 20px;
+}
+
+
+
+
+.width-100-per{
+  width: 100% !important;
+}
+.width-90-per{
+    width: 90% !important;
+}
+.width-80-px{
+  width: 80px;
+}
+.width-80-per{
+  width: 80% !important;
+}
+.width-50per{
+  width: 50% !important;
+}
+.width-40-per{
+  width: 40%;
+}
+.width-38-per{
+  width: 38%;
+}
+.height-100-per{
+  height: 100% !important;
+}
+.height-80-px{
+  height: 80px;
+}
+.height-50-per{
+  height: 50% !important;
+}
+.height-40-per{
+  height: 40%;
+}
+.height-38-per{
+  height: 38%;
+}
+.border-radius-50-per{
+  border-radius: 50%;
+}
+
+/*margin*/
+.margin-0-px{
+  margin: 0px !important;
+}
+.margin-top-10-px{
+  margin-top: 10px !important;
+}
+.margin-top-20-px{
+  margin-top: 20px !important;
+}
+.margin-right-10-px{
+  margin-right: 10px;
+}
+.margin-left-10-px{
+  margin-left: 10px;
+}
+.margin-bottom-20-px{
+    margin-bottom:20px;
+}
+
+.border-0-px{
+  border: 0px !important;
+}
+.placeholder-color{
+  color: rgba(81, 135, 208, 0.51);
+}
+
+/* padding css*/
+.padding-0-px{
+    padding: 0px !important;
+}
+.padding-20-px{
+    padding: 20px;
+}
+.padding-right-5px{
+    padding-right: 5px !important;
+}
+.padding-left-4px{
+ padding-left: 4px !important;
+}
+
+
+
+
+
+.login_bg{
+  background: url("../img/splash-bg.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login_logo_img{
+  width: 30%;
+  height: 100px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.login_name{
+  font-size: 18px;
+  font-weight: bold;
+  color: gray
+}
+.login_screen_field_div{
+  background-color: white;
+  display: flex;
+  width: 80%;
+  border: solid 1px;
+  border-color:cornflowerblue;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.login_screen_field_img_div{
+  background-color: cornflowerblue;
+  width: 40px;
+  height:40px;
+}
+.login_screen_field_img{
+  left: 0px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+}
+.login_screen_field_div1{
+  background-color: white;
+  display: flex;
+  width: 80%;
+  border: solid 1px;
+  border-color:cornflowerblue;
+  border-radius: 4px;
+}
+
+.input_filed{
+  width: 100%;
+
+}
+.input_filed::-webkit-input-placeholder {
+  color: rgba(81, 135, 208, 0.51);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(81, 135, 208, 0.51);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: rgba(81, 135, 208, 0.51);
+}
+
+:-ms-input-placeholder {
+  color: rgba(81, 135, 208, 0.51);
+}
+.password_div{
+  display: block;
+  position: relative;
+  width: 80%
+}
+.forgot_passwrd_txt{
+  color: green;
+  margin-bottom: 10px
+}
+
+.signin_btn{
+  max-width: 80% !important;
+  border-radius: 4px;
+}
+
+.social_icon_div{
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.fb_icon{
+  width:50px;
+  height: 50px;
+  margin-right: 30px;
+}
+.google_icon{
+  width:50px;
+  height: 50px;
+  margin-left: 30px
+}
+
+.field_icon_div{
+  display: flex;
+  align-items: center;
+}
+.Aligner {
+  margin-left: 5px;
+  margin-right: 5px;
+  width:100%;
+  display: flex;
+  align-items: center;
+}
+
+.signUp-btn{
+    background-color: white !important;
+    border: solid 1px !important;
+    border-color: rgba(74, 74, 74, 0.55) !important;
+    color: cornflowerblue !important;
+}
+.footer_social_btn{
+    border: solid 1px !important;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-color: gray!important;
+}
+/*Registeration css*/
+
+.check_box{
+  color: #0c60ee;
+  float: left;
+  font-size: 20px;
+}
+.terms_cnd_txt{
+  float: left;
+  margin-left: 20px;
+  font-size: 13px;
+  color: forestgreen;
+}
+.login_txt{
+  font-size: 13px !important;
+  color: forestgreen !important;
+}
+
+.submit_btn{
+  margin-top: 30px !important;
+}
+
+.font-30{
+  font-size: 30px;
+}
+
+.font-bold{
+  font-weight: bold;
+}
+
+.margin-top-20px{
+  margin-top: 20px;
+}
+
+.gray-txt-color{
+  color: gainsboro;
+}
+/*forgot password*/
+
+.forgot_pass_txt{
+  font-size: 18px;
+  color:cornflowerblue;
+}
+
+.forgot_pass_screen_btn{
+  max-width: 50% !important;
+  border-radius: 4px;
+}
+/*.bg_color{
+  background-color: cornflowerblue !important;
+  color: white;
+}*/
+
+.bar{
+  background-color: cornflowerblue !important;
+}
+
+
+
+
+
+.responsive-container {
+  position: relative;
+  width: 100%;
+/*  border: 1px solid black;*/
+}
+
+.dummy {
+  padding-top: 150%; /* forces 1:1 aspect ratio */
+}
+
+.img-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  text-align:center; /* Align center inline elements */
+  font: 0/0 a;
+}
+
+.img-container:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.img-container img {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+
+.login-button{
+  background-color: #387EF5;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.margin-input-reg-tag{
+  margin: 10px 5px 10px 5px !important;
+}
+
+.field_screen{
+    background-color: white;
+    display: flex;
+    width: 80%;
+    border: solid 1px;
+    border-color: rgba(128, 128, 128, 0.45);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.field_screen_noborder{
+  background-color: white;
+  display: flex;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.input_field_label{
+    height: 50px;
+    padding: 0px 0px 0px 5px !important;
+    margin-bottom: 5px
+}
+
+/*menu css*/
+
+.profile_pic_menu{
+    width: 20px;
+    height: 20px;
+    border-color: gray;
+    border: solid 1px;
+}
+
+.right_arrow{
+    position: absolute;
+    right: 20px;
+}
+
+.input-label-txt-font{
+    font-size: 12px !important;
+}
+
+/*slide css*/
+
+.slide_footer{
+    background-color: #ffffff !important;
+    border-color: gray;
+}
+/*Manage profile css*/
+.footer-btn-bar{
+    background-color: #ffffff !important;
+    padding: 0px ! important;background-position:center;
+    border-top-width: 0px !important;
+}
+.footer-btn-div{
+    padding:0px;border: 0px !important;
+    display: -webkit-box;
+}
+
+/* select courses button */
+
+.button_selcourses {
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.txt_selcourses{
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  font-size: 12px;
+  padding-top: 0px;
+  padding-left: 36px;
+}
+/* heading of choosen subject */
+.txt_selsubhead{
+  background-color: white; /* Green */
+  border: none;
+  color: darkgray;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  padding-top: 0px;
+}

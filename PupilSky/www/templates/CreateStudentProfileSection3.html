@@ -1,0 +1,36 @@
+<ion-view  hide-nav-bar="true">
+
+    <ion-header-bar class="new-status-bar bar-positive">
+        <div class="buttons">
+            <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+        </div>
+        <h1 class="title">Profile Picture Upload</h1>
+    </ion-header-bar>
+
+  <ion-content>
+    <div align="center">
+      <div class="text-center social_icon_div margin-top-20-px">
+        <img src="img/takepic.png" class="width-40-per height-40-per" ng-click="GetImageFromCamera()">
+        <img src="img/galleryicon.png" class="width-38-per height-38-per" ng-click="choosePhoto()">
+      </div>
+
+      <div class="Aligner width-80-per">
+        <div class="login_screen_field_div width-50per height-50-per margin-right-10-px " align="center" >
+          <img ng-src={{profile.imgURL}}   no-image class="width-100-per height-100-per"  >
+        </div>
+
+    </div>
+      </div>
+
+
+  </ion-content>
+    <ion-footer-bar  class="footer-btn-bar">
+        <div class="row footer-btn-div"  ng-click="submitProfile()">
+            <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+                <span class="white-txt-color font-15">Submit</span>
+            </div>
+        </div>
+
+
+    </ion-footer-bar>
+</ion-view>
