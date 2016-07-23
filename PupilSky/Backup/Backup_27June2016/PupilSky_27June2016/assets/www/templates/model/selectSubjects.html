@@ -1,0 +1,32 @@
+
+<ion-modal-view class="new-status-post-view">
+  <ion-header-bar class="new-status-bar bar-positive">
+    <div class="buttons">
+      <button class="button button-clear" ng-click="">Select Subjects</button>
+    </div>
+    <h1 class="title"></h1>
+
+    <span class="ion-ios-close-outline" style="position: absolute; right: 10px; font-size: 25px; margin-top: 7px;" ng-click="cancelSelection()"></span>
+    <!--<div class="buttons">
+      <button class="button button-clear" ng-click="postNewStatusModal()">Post</button>
+    </div>-->
+  </ion-header-bar>
+  <ion-content>
+
+    <ion-list>
+      <ion-checkbox ng-repeat="item in subjectData" ng-click="selectSubjectCheckbox(item,$index)" ng-model="isSubChecked.checked[$index]">
+        {{ item.name }}
+      </ion-checkbox>
+    </ion-list>
+
+  </ion-content>
+  <ion-footer-bar  class="footer-btn-bar">
+    <div class="row footer-btn-div"  ng-click="closeSubjectsModal()" >
+      <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+        <span class="white-txt-color font-15">Ok</span>
+      </div>
+    </div>
+
+
+  </ion-footer-bar>
+</ion-modal-view>

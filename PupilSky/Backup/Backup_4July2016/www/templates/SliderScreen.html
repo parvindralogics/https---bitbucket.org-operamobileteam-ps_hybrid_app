@@ -1,0 +1,37 @@
+<ion-view >
+  <ion-content scroll="false">
+    <ion-slide-box on-slide-changed="slideIndex($index)"  auto-play="true" class="height-100-per" >
+      <ion-slide>
+        <div  class="row width-100-per height-100-per">
+          <img src="img/slide1.jpg" class="full-image">
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div  class="row width-100-per height-100-per">
+          <img src="img/slide1.jpg" class="full-image">
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div  class="row width-100-per height-100-per">
+          <img src="img/slide1.jpg" class="full-image">
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div  class="row width-100-per height-100-per">
+          <img src="img/slide1.jpg" class="full-image">
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+  </ion-content>
+    <ion-footer-bar ng-if="index == 3" class="slide_footer">
+
+        <div class="width-100-per" style="text-align: right" align="right" >
+            <button class=" button button-clear font-20 green-txt-color" style="right: 0px" ng-click="skip()">skip</button>
+        </div>
+
+    </ion-footer-bar>
+</ion-view>

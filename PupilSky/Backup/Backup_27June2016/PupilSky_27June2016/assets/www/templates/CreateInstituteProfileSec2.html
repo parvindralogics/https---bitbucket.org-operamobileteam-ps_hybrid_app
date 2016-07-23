@@ -1,0 +1,64 @@
+<ion-view hide-nav-bar="true" cache-view="false">
+    <ion-header-bar class="new-status-bar bar-positive">
+        <div class="buttons">
+            <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+        </div>
+        <h1 class="title">Institute Profile info</h1>
+
+    </ion-header-bar>
+
+
+    <ion-content>
+
+        <div align="center">
+
+
+            <div class="field_screen" align="left">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">Teacher name</span>
+                    <input type="text" placeholder="Teacher name" class="padding-right-5px" ng-model="insTeacher.name">
+                </label>
+            </div>
+
+
+            <div class="field_screen" align="left">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">Highest Qualification</span>
+                    <input type="text" placeholder="Highest Qualification" class="padding-right-5px" ng-model="insTeacher.qualification">
+                </label>
+            </div>
+
+          <div class="field_screen " align="center">
+
+            <div class="Aligner padding-top padding-bottom">
+              <select class="width-100-per white_bg_color border-0-px " ng-model="modelUniv.id" ng-options="university.id as university.name for university in universityData"
+                >
+                <option value="" selected="selected">University</option>
+              </select>
+            </div>
+
+          </div>
+
+            <div class="field_screen" align="left">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                    <span class="input-label app_txt_color input-label-txt-font">About me</span>
+                    <textarea aria-multiline="10" placeholder="About me" class="padding-right-5px " ng-model="insTeacher.aboutMe"></textarea>
+                </label>
+            </div>
+
+        </div>
+
+    </ion-content>
+
+    <ion-footer-bar
+            class="footer-btn-bar">
+        <div class="row footer-btn-div" ng-click="next()">
+            <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+                <span class="white-txt-color font-15">Next</span>
+            </div>
+        </div>
+
+
+    </ion-footer-bar>
+
+</ion-view>

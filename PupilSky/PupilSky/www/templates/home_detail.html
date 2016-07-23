@@ -1,0 +1,174 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+
+  <ion-header-bar class="new-status-bar bar-positive">
+    <div class="buttons">
+      <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+    </div>
+    <h1 class="title">Detail</h1>
+
+  </ion-header-bar>
+
+  <ion-content class="">
+
+    <div class="cover-div">
+      <!--<img class="cover-image pro-img-opacity" src="img/icons/images.jpg">-->
+      <img class="cover-image pro-img-opacity" ng-src="{{pro_image}}" no-image-update>
+
+      <div class="top-div-height">
+        <p class="institute-name-p">{{name}}</p>
+        <p class="main-address-text">{{address}}</p>
+
+        <div class="row padding-0 margin-top-min5">
+          <div class="col">
+            <div class="row padding-0">
+              <div>
+                <img class="width-20" src="img/icons/votes_icon.png" />
+              </div>
+              <div class="">
+                <p class="institute-review-p review-text-p">4.9 Votes</p>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="col">
+            <div class="row padding-0">
+              <div>
+                <img class="width-20" src="img/icons/review_icon.png" />
+              </div>
+              <div class="">
+                <p class="institute-review-p review-text-p">49 Reviews</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div style="height: 71px;">
+      <div class="row call-main-div">
+        <div class="col text-center call-button-border">
+          <img class="width-25" src="img/icons/call_icon.png">
+          <p class="address-text">Call</p>
+        </div>
+        <div class="col text-center sms-button-border">
+          <img  class="width-25" src="img/icons/sms_icon.png">
+          <p class="address-text margin-top-10">Email</p>
+        </div>
+        <div class="col text-center sms-button-border">
+          <img  class="bookmark-icon" src="img/icons/bookmark_icon.png">
+          <p class="address-text">Bookmark</p>
+        </div>
+        <div class="col text-center sms-button-border">
+          <img  class="width-25" src="img/icons/rating_icon.png">
+          <p class="address-text">Rating</p>
+        </div>
+      </div>
+    </div>
+    <div style="background: #ffffff">
+
+      <div class="online-status-div">
+        <div class="row">
+
+          <div class="col">
+
+            <div class="row text-center">
+              <div>
+                <img class="width-15" src="img/icons/online_icon.png">
+              </div>
+              <div>
+                <p class="font-size-12">&nbsp;&nbsp;Online Payment</p>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div>
+                <img class="width-15" src="img/icons/distance_icon.png">
+              </div>
+              <div>
+                <p class="font-size-12">&nbsp;&nbsp;4.5 km&nbsp;&nbsp;</p>
+              </div>
+
+              <div>
+                <img class="width-15" src="img/icons/hours_icon.png">
+              </div>
+              <div>
+                <p class="font-size-12">&nbsp;&nbsp;1 hrs.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <ionic-ratings class="margin-top-10" ratingsobj='ratingsObject'></ionic-ratings>
+            <div class="row">
+              <div>
+                <img class="width-15" src="img/icons/web_icon.png">
+              </div>
+              <div>
+                <p class="font-size-12">&nbsp;&nbsp;{{detailObjReturned.website}}</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="border-bottom-div">
+
+        <div class="padding-10">
+          <p class="reviews-p">Reviews</p>
+        </div>
+
+        <div style="margin-top: -20px" class="row">
+
+          <div class="padding-3">
+            <img class="profile-image" src="img/icons/profile.png">
+          </div>
+
+          <div class="col">
+            <p class="reviews-name-p">John Doe</p>
+            <p class="reviews-data-p">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="border-bottom-div">
+
+        <div class="padding-10">
+          <p class="reviews-p">Address</p>
+        </div>
+
+        <div style="margin-top: -20px" class="row">
+
+          <div class="col">
+            <p class="reviews-data-p">{{full_address}}</p>
+          </div>
+
+          <div class="">
+            <img class="width-32" src="img/icons/share_icon.png">
+          </div>
+
+        </div>
+
+        <div class="padding-5 margin-bottom-10">
+          <span class="locate-map-button">Locate Map</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+
+</ion-view>

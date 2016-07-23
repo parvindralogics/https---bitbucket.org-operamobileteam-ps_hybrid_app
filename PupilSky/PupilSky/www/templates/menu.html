@@ -1,0 +1,179 @@
+<ion-side-menus enable-menu-with-back-views="true" cache-view="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="home-bar bar-stable">
+      <ion-nav-back-button >
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" style="color: white" menu-toggle="left" ng-click="menuCall()">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" cache-view="false">
+    <!--<ion-header-bar class="bar-stable bg_color" >
+      <h1 class="title" >Left</h1>
+
+    </ion-header-bar>-->
+    <ion-content>
+      <div class="app-bg-theme padding-20-px" >
+        <div class=" width-100-per">
+            <img ng-src="{{menuProfilePic}}" no-image-update class="width-80-px height-80-px border-radius-50-per" >
+          <br>
+        </div>
+       <!-- <p class="white-txt-color">Pravindra Singh</p>-->
+          <div class="width-100-per"  ng-click="openMenuModal()">
+
+              <button class="border-0-px white-txt-color app-bg-theme width-100-per"  style="text-align: left" >
+<!--                  <option selected>{{name}} </option>
+                  <option>{{name}}</option>-->
+
+                {{selected_name}}
+              </button>
+
+          </div>
+
+      </div>
+      <ion-list class="white_bg_color ">
+       <!-- <ion-item menu-close ng-click="login()">
+          Login
+        </ion-item>
+        <ion-item menu-close href="#/app/search">
+          Search
+        </ion-item>
+        <ion-item menu-close href="#/app/browse">
+          Browse
+        </ion-item>-->
+
+        <ion-item menu-close href="#/app/mainPage">
+          <div class="Aligner margin-0-px">
+          <i class="icon ion-clipboard font-25 icon_color"></i>
+         <p class="menu-item-margin">Home</p>
+
+          </div>
+        </ion-item>
+
+        <ion-item   menu-close href="#/app/AddProfile">
+          <div class="Aligner margin-0-px">
+          <div class="border-radius-50-per profile_pic_menu" align="center">
+            <i class="icon ion-person icon_color"></i>
+          </div>
+            <p class="menu-item-margin">Manage Profile</span> </p>
+          </div>
+        </ion-item>
+       <!-- <hr>-->
+
+          <div ng-repeat="group in groups">
+<!--              <ion-item class="item-stable"
+                        ng-click="toggleGroup(group)"
+                        ng-class="{active: isGroupShown(group)}">
+                  <i class="icon ion-social-usd font-15" ></i>
+                  &nbsp;ECash
+                  <i class="icon  font-15 right_arrow" ng-class="isGroupShown(group) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+                 &lt;!&ndash; Group {{group.name}}&ndash;&gt;
+              </ion-item>-->
+              <ion-item class="item-accordion"
+                        ng-repeat="item in group.items"
+                        ng-show="isGroupShown(group)"  ng-click="onClick(group,$index)" menu-close >
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item}}
+              </ion-item>
+          </div>
+         <!-- <ion-item menu-close href="#/app/notification">
+              <i class="icon ion-chatbox-working font-15" ></i>
+              Notification
+          </ion-item>-->
+
+         <!-- <a class="item item-icon-left item-icon-right" href="#/app/ECashOption">
+              <i class="icon ion-social-usd" style="font-size: 15px"></i>
+              ECash
+              <i class="icon ion-social-usd" style="font-size: 15px;right: 0px"></i>
+          </a>-->
+
+        <!--  <ion-item menu-close href="#/app/ECashOption" >
+
+              <i class="icon ion-social-usd font-15"></i>
+              ECash
+              <i class="icon ion-chevron-right font-15 right_arrow"></i>
+
+          </ion-item>-->
+
+ <!--       <ion-item menu-close href="#/app/OrderList">
+          <i class="icon ion-clipboard font-20"></i>
+          Order List
+        </ion-item>-->
+     <!--     <ion-item  menu-close href="#/app/favorite">
+              <i class="icon ion-heart font-20"></i>
+              Favorite
+          </ion-item>
+        <ion-item menu-close href="#/app/getReview">
+          <i class="icon ion-star font-20"></i>
+          Get Review
+        </ion-item>-->
+
+       <!-- <hr>-->
+
+        <ion-item menu-close href="#/app/contactUs">
+          <div class="Aligner margin-0-px">
+          <i class="icon ion-android-call font-20 icon_color"></i>
+          <p class="menu-item-margin">Contact Us </p>
+            </div>
+        </ion-item>
+        <ion-item menu-close href="#/app/AboutUs">
+          <div class="Aligner margin-0-px">
+          <i class="icon ion-information-circled font-20 icon_color"></i>
+          <p class="menu-item-margin"> About Us </p>
+            <!--<i class="icon ion-chevron-right font-20 right_arrow"></i>-->
+            </div>
+        </ion-item>
+
+        <ion-item menu-close href="#/app/MyProfile">
+          <div class="Aligner margin-0-px">
+          <i class="icon ion-android-person font-20 icon_color"></i>
+          <p class="menu-item-margin">My Account </p>
+         <!-- <i class="icon ion-chevron-right font-20 right_arrow"></i>-->
+            </div>
+        </ion-item>
+
+        <ion-item menu-close ng-click="logout()" >
+          <div class="Aligner margin-0-px">
+          <i class="icon ion-log-out font-20 icon_color"> </i>
+          <p class="menu-item-margin"> Signout </p>
+          <!--<i class="icon ion-chevron-right font-20 right_arrow"></i>-->
+            </div>
+        </ion-item>
+
+<!--          <ion-item menu-close href="#/app/settings">
+              <i class="icon ion-gear-b font-20"></i>
+              Settings
+              <i class="icon ion-chevron-right font-15 right_arrow"></i>
+          </ion-item>-->
+       <!-- <ion-item  menu-close href="#/app/help">
+          <i class="icon ion-help-circled font-20"></i>
+          Help
+        </ion-item>-->
+       <!-- <hr>
+        <ion-item  class="center" menu-close href="#/app/AddProfile">
+          <i class="icon ion-log-out" style="font-size: 20px" ></i>
+          Logout
+        </ion-item>-->
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+
+
+<script id="setting-popup.html" type="text/ng-template" class="popup-background">
+
+    <div class="width-100 popup-background">
+        <div class="text-center setting-alert-popup-bg padding-top-10">
+            <div class="highlight padding-bottom">Warning</div>
+            <p class="font-size-12 padding-bottom">you don't have enough balance</p>
+
+            <div>
+                <button class="button button-dark space" ng-click="closePopup()">OK</button>
+            </div>
+        </div>
+    </div>
+</script>

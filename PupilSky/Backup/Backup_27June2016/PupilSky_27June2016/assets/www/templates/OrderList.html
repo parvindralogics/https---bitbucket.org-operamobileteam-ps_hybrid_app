@@ -1,0 +1,22 @@
+<ion-view view-title="Order List" hide-nav-bar="true">
+
+  <ion-header-bar class="new-status-bar bar-positive">
+    <div class="buttons">
+      <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+    </div>
+
+  </ion-header-bar>
+    <ion-content>
+        <div class=" list card list-borderless" ng-repeat="data in listData">
+
+            <a class="item item-thumbnail-left item-button-right ">
+                <img src="img/logo.png" >
+                <h2>Mobile</h2>
+                <p> price :100</p>
+                <button class="button button-positive" style="bottom: 5px;top: 50px !important;" ng-click="showSettingAlert()">check out</button>
+            </a>
+
+        </div>
+
+    </ion-content>
+</ion-view>

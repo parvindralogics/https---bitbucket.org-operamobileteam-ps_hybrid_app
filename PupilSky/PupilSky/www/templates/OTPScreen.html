@@ -1,0 +1,49 @@
+<ion-view view-title="login">
+
+  <ion-header-bar class="new-status-bar bar-positive">
+    <div class="buttons">
+      <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+    </div>
+
+    <h1 class="title">OTP Verification</h1>
+
+  </ion-header-bar>
+
+  <ion-content class="center_elements">
+
+    <div align="center">
+      <p class="forgot_pass_txt margin-top-20-px">Please enter the verification code sent to {{userMobileNumber}}</p>
+<!--      <div class="login_screen_field_div" align="center" style="width: 90%">
+        <div class="login_screen_field_img_div field_icon_div"><i
+          class="login_screen_field_img icon  ion-ios-locked-outline white-txt-color font-25" ></i></div>
+        <div class="Aligner"> <input type="number" placeholder="OTP Number"  ng-model="otpData.otpCode" limit-to="4"></div>
+      </div>-->
+
+      <div class="login_screen_field_div_otp_item" align="center" class="center" >
+       <input type="number" class="otp_input" placeholder="___"  ng-model="otpData.otpCode1" limit-to="1">
+         <input type="number" class="otp_input" placeholder="___"  ng-model="otpData.otpCode2" limit-to="1">
+         <input type="number" class="otp_input" placeholder="___"  ng-model="otpData.otpCode3" limit-to="1">
+        <input type="number" class="otp_input" placeholder="___"  ng-model="otpData.otpCode4" limit-to="1">
+      </div>
+
+      <div class="resend_div"> Not recieved code ? <span class="forgot_passwrd_txt" ng-click="reSend()">Resend code</span></div>
+
+<!--      <button class="button button-positive forgot_pass_screen_btn"  ng-click="reSend()">
+        Resend OTP
+      </button>-->
+    </div>
+
+  </ion-content>
+
+  <ion-footer-bar class="footer-btn-bar">
+
+    <div class="row footer-btn-div"  ng-click="submit()" >
+      <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+        <span class="white-txt-color font-15">Submit</span>
+      </div>
+    </div>
+
+  </ion-footer-bar>
+
+</ion-view>
+

@@ -1,0 +1,96 @@
+<ion-view  hide-nav-bar="true" cache-view="false">
+    <ion-header-bar class="new-status-bar bar-positive">
+        <div class="buttons">
+            <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
+        </div>
+        <h1 class="title">Student Profile Info</h1>
+
+    </ion-header-bar>
+  <ion-content>
+
+    <div align="center">
+
+
+        <div class="field_screen" align="left">
+            <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+                <span class="input-label app_txt_color input-label-txt-font">Name</span>
+                <input type="text" placeholder="Name" class="padding-right-5px" ng-model="stu_info.name">
+            </label>
+        </div>
+
+        <div class="field_screen " align="center">
+
+
+          <div class="Aligner padding-top padding-bottom">
+          <select class="width-100-per white_bg_color border-0-px " ng-model="model.id" ng-options="note.id as note.name for note in studentCourseData"
+                  ng-change = "selectCourse()">
+
+            <option value="" selected="selected">Select Course</option>
+          </select>
+
+            </div>
+
+        </div>
+
+
+      <div class="field_screen " align="center">
+
+        <div class="Aligner padding-top padding-bottom" ng-click="openSubjectsModal()">
+
+          <button type="text" class="button_selcourses" > Select Subject</button>
+
+        </div>
+
+      </div>
+
+      <ion-list>
+
+        <ion-item ng-if="totalSelectedSubName.length > 0" class="txt_selsubhead">
+          Selected Courses
+        </ion-item>
+
+        <ion-item ng-repeat="item in totalSelectedSubName" class="txt_selcourses">
+          {{ item }}
+        </ion-item>
+
+      </ion-list>
+
+
+      <div class="field_screen " align="center">
+
+      <div class="Aligner padding-top padding-bottom">
+        <select class="width-100-per white_bg_color border-0-px " ng-model="hob_model.id" ng-options="hobbies.id as hobbies.name for hobbies in hobbiesData"
+                ng-change = "selectHobbies()">
+
+          <option value="" selected="selected">Select Hobbies</option>
+        </select>
+
+      </div>
+
+    </div>
+
+
+      <div class="field_screen" align="left">
+        <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
+          <span class="input-label app_txt_color input-label-txt-font">About Me</span>
+          <textarea aria-multiline="10" placeholder="About me" class="padding-right-5px" ng-model="stu_info.about_me_txt"></textarea>
+        </label>
+      </div>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+    <ion-footer-bar  class="footer-btn-bar">
+        <div class="row footer-btn-div"  ng-click="postStudentProfileInfo()">
+            <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+                <span class="white-txt-color font-15">Next</span>
+            </div>
+        </div>
+
+
+    </ion-footer-bar>
+</ion-view>
+
+

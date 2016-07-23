@@ -1,0 +1,43 @@
+
+<ion-modal-view class="new-status-post-view">
+  <ion-header-bar class="new-status-bar bar-positive">
+    <div class="buttons">
+      <button class="button button-clear" ng-click="">Select Courses</button>
+    </div>
+    <h1 class="title"></h1>
+
+    <span class="ion-ios-close-outline" style="position: absolute; right: 10px; font-size: 25px; margin-top: 7px;" ng-click="closeMenuModal()"></span>
+
+  </ion-header-bar>
+  <ion-content>
+
+    <ion-list>
+      <ion-checkbox ng-repeat="item in profiles_created_stu" ng-click="selectMenuUser(item,$index)" ng-model="isMenuChecked.checked[$index]">
+        {{ item.firstName }}
+      </ion-checkbox>
+    </ion-list>
+
+    <ion-list>
+      <ion-checkbox ng-repeat="item in profiles_created_inst" ng-click="selectMenuUser(item,$index)" ng-model="isMenuChecked.checked[$index]">
+        {{ item.name }}
+      </ion-checkbox>
+    </ion-list>
+
+    <ion-list>
+      <ion-checkbox ng-repeat="item in profiles_created_tut" ng-click="selectMenuUser(item,$index)" ng-model="isMenuChecked.checked[$index]">
+        {{ item.firstName }}
+      </ion-checkbox>
+    </ion-list>
+
+
+  </ion-content>
+<!--  <ion-footer-bar  class="footer-btn-bar">
+    <div class="row footer-btn-div"  ng-click="closeCoursesModal()" >
+      <div class="col app-bg-theme col-center text-center" style="padding: 10px">
+        <span class="white-txt-color font-15">Ok</span>
+      </div>
+    </div>
+
+
+  </ion-footer-bar>-->
+</ion-modal-view>
