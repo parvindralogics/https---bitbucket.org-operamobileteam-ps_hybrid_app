@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="true"  cache-view="false">
     <ion-header-bar class="new-status-bar bar-positive">
         <div class="buttons">
             <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
@@ -19,10 +19,23 @@
             </div>
 
             <div class="field_screen" align="left">
-                <select class="width-100-per white_bg_color border-0-px" ng-model="instituteObj.selectedEstYear">
+
+              <input type="text" placeholder="Name" class="padding-right-5px" ng-model="instituteObj.nameYear" ng-if="isEditMode== true" ng-click="changeEditMode()">
+
+                <select class="width-100-per white_bg_color border-0-px" ng-model="instituteObj.selectedEstYear" ng-if="isEditMode== false">
                     <option value="" selected="selected">Establishment Year</option>
                     <option>2016</option>
                     <option>2015</option>
+                    <option>2014</option>
+                    <option>2013</option>
+                    <option>2012</option>
+                    <option>2011</option>
+                    <option>2010</option>
+                    <option>2000</option>
+                    <option>2001</option>
+                    <option>2002</option>
+                    <option>2003</option>
+                    <option>2004</option>
                 </select>
             </div>
 

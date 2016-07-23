@@ -1,4 +1,4 @@
-<ion-view  hide-nav-bar="true">
+<ion-view  hide-nav-bar="true" cache-view="false">
 
     <ion-header-bar class="new-status-bar bar-positive">
         <div class="buttons">
@@ -14,14 +14,17 @@
         <img src="img/galleryicon.png" class="width-38-per height-38-per" ng-click="choosePhoto()">
       </div>
 
-      <div class="Aligner width-80-per">
-        <div class="login_screen_field_div width-50per height-50-per margin-right-10-px " align="center" >
-          <img ng-src={{profile.imgURL}}   no-image class="width-100-per height-100-per"  >
+      <div class="row" style="flex-wrap: wrap;">
+
+        <div class="col col-50" ng-repeat="image in picsCaptured">
+          <div class="image-grid gifts-grid-div">
+            <div class="text-center" ng-click="selectProfilePicture($index)">
+              <img  ng-src="{{image}}"  class="gift-items-images" />
+            </div>
+          </div>
         </div>
-
-    </div>
       </div>
-
+    </div>
 
   </ion-content>
     <ion-footer-bar  class="footer-btn-bar">
@@ -30,7 +33,6 @@
                 <span class="white-txt-color font-15">Submit</span>
             </div>
         </div>
-
 
     </ion-footer-bar>
 </ion-view>

@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="true" cache-view="false">
     <ion-header-bar class="new-status-bar bar-positive">
         <div class="buttons">
             <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
@@ -10,8 +10,28 @@
     <ion-content>
         <div align="center">
             <div class="text-center social_icon_div margin-top-20-px">
-                <img src="img/takepic.png" class="width-40-per height-40-per">
-                <img src="img/galleryicon.png" class="width-38-per height-38-per">
+                <img src="img/takepic.png" class="width-40-per height-40-per" ng-click="GetImageFromCamera()">
+                <img src="img/galleryicon.png" class="width-38-per height-38-per" ng-click="choosePhoto()">
+            </div>
+
+          <div class="row" style="flex-wrap: wrap;">
+
+            <div class="col col-50" ng-repeat="image in picsCaptured">
+              <div class="image-grid gifts-grid-div">
+                <div class="text-center" ng-click="selectProfilePicture($index)">
+                  <img  ng-src="{{image}}"  class="gift-items-images" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!--            <div class="Aligner width-80-per">
+                <div class="login_screen_field_div width-50per height-50-per margin-right-10-px " align="center">
+                    <img src="img/logo.png" class="width-100-per height-100-per">
+                </div>
+                <div class="login_screen_field_div width-50per height-50-per margin-right-10-px " align="center">
+                    <img src="img/logo.png" class="width-100-per height-100-per">
+                </div>
             </div>
 
             <div class="Aligner width-80-per">
@@ -27,16 +47,7 @@
                 <div class="login_screen_field_div width-50per height-50-per margin-right-10-px " align="center">
                     <img src="img/logo.png" class="width-100-per height-100-per">
                 </div>
-                <div class="login_screen_field_div width-50per height-50-per margin-right-10-px " align="center">
-                    <img src="img/logo.png" class="width-100-per height-100-per">
-                </div>
-            </div>
-
-            <div class="Aligner width-80-per">
-                <div class="login_screen_field_div width-50per height-50-per margin-right-10-px " align="center">
-                    <img src="img/logo.png" class="width-100-per height-100-per">
-                </div>
-            </div>
+            </div>-->
         </div>
 
 

@@ -2,15 +2,23 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/../../Ionic 2/PupilSky/www/templates/tab-dash.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/plugins/ionic-plugin-keyboard/www/ios/keyboard.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/css/style.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/controllers.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/js/controllers/ForgotPasswordController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/js/controllers/LoginController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/js/controllers/ManageProfileController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/js/controllers/OTPController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/js/controllers/SplashController.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/www/js/controllers/directives.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/LoginControllers/ForgotPasswordController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/LoginControllers/LoginController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/LoginControllers/ManageProfileController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/LoginControllers/OTPController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/LoginControllers/RegistrationController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/LoginControllers/SplashController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/MainPageControllers/mainPageControllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/myProfileControllerBackup.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/profilesControllers/instituteControllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/profilesControllers/myProfileController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/profilesControllers/studentControllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/profilesControllers/tutorControllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/directives.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/services.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/lib/ionic/js/ionic-angular.min.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/AboutUs.html" charset="UTF-8" />
@@ -18,20 +26,35 @@
     <file url="file://$PROJECT_DIR$/www/templates/AddProfile.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/ContactUs.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/CreateInstituteProfileSec1.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/CreateInstituteProfileSec2.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/CreateInstituteProfileSec3.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/CreateInstituteProfileSec4.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/CreateStudentProfileSection1.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/CreateStudentProfileSection2.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/CreateStudentProfileSection3.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/Favorite.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/ForgotPassword.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/GetReview.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/InstituteAddTeacher_and_Course.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/MainPage.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/MyProfile.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/OTPScreen.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/OrderList.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/Register.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/Settings.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/TeacherAddress.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/TutorInfo.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/TutorProfile.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/TutorProfilePic.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/home_detail.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/loginScreen.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/menu.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/model/changeProfile.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/model/selectCourses.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/model/selectSubjects.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../Krishen gandhi/SampleApp/ionic.project" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../Krishen gandhi/SampleApp/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../Krishen gandhi/SampleApp/www/js/productAddServices.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../Krishen gandhi/SampleApp/www/js/productSellServices.js" charset="UTF-8" />
   </component>
 </project>

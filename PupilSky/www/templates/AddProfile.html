@@ -1,9 +1,11 @@
-<ion-view view-title="Manage Profile" hide-nav-bar="true">
+<ion-view view-title="Manage Profile" hide-nav-bar="true" cache-view="false">
 
   <ion-header-bar class="new-status-bar bar-positive">
     <div class="buttons">
       <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
     </div>
+
+    <h1 class="title">Manage Profile</h1>
 
   </ion-header-bar>
 
@@ -14,22 +16,31 @@
             <hr>
         </div>
 
+      <div class="margin-top-20-px section_title_profile">
+
+        <p class="margin-left-10-px">Create Profile</p>
+
+      </div>
+
         <div class="Aligner margin-0-px margin-top-10-px">
             <div align="center" class="col col-33">
                 <img src="img/student_profile_icon.png" class="width-100-per" ng-click="createStudentProfile()">
                 <br>
                 <span class="green-txt-color font-bold">Student</span>
             </div>
+
             <div align="center" class="col col-33" ng-click="createProfile()">
                 <img src="img/teacher_profile_icon.png" class="width-100-per">
                 <br>
                 <span class="blue-txt-color font-bold">Teacher</span>
             </div>
+
             <div align="center" class="col col-33" ng-click="createInstituteProfile()">
                 <img src="img/institute_profile_icon.png" class="width-100-per">
                 <br>
                 <span class="orange-txt-color font-bold">Institute</span>
             </div>
+
         </div>
 
         <div ng-if="isProfilesExists == false">
@@ -45,15 +56,13 @@
 
         <div ng-if="isProfilesExists == true">
 
-        <div class="margin-top-20-px">
-            <hr>
-            <p class="margin-left-10-px">My Profiles</p>
-            <hr>
+        <div class="margin-top-20-px section_title_profile">
+
+            <p class="margin-left-10-px ">My Profiles</p>
+
         </div>
 
-
-
-                <div class=" list" style="padding-top: 0px;margin-top: -8px">
+<!--                <div class=" list" style="padding-top: 0px;margin-top: -8px">
 
                   <div ng-repeat="index in profiles_created_stu">
                     <a class="item item-thumbnail-left" style="padding-top: 18px;min-height: 60px;padding-left: 60px">
@@ -63,7 +72,51 @@
 
                   </div>
 
-                </div>
+                </div>-->
+
+          <!-- Students Profiles-->
+          <ion-list show-delete="false" can-swipe="true" ng-repeat="index in profiles_created_stu">
+            <ion-item style="height: 70px;" align="center">
+
+              <button click-for-options  class="button button-icon icon ion-android-arrow-dropright item_options"></button>
+
+              <div class="container_ionitem" >
+                <div class="leftitem"><img src="img/student_profile_icon.png" style="width: 40px;height:40px;"></div>
+               <div class="rightitem"> <p>{{index.firstName}}</p> </div>
+              </div>
+              <ion-option-button  class="button-assertive icon ion-trash-a" ng-click="deleteProfile(index,'STUDENT')"></ion-option-button>
+              <ion-option-button  class="button-balanced icon ion-edit" ng-click="goToMyProfile(index,'STUDENT')"></ion-option-button>
+            </ion-item>
+          </ion-list>
+
+         <!-- Institutes Profiles-->
+          <ion-list show-delete="false" can-swipe="true" ng-repeat="index in profiles_created_inst">
+            <ion-item style="height: 60px;">
+
+              <button click-for-options class="button button-icon icon ion-android-arrow-dropright item_options"></button>
+
+              <div class="container_ionitem" >
+                <div class="leftitem"><img src="img/institute_profile_icon.png" style="width: 40px;height:40px;"></div>
+                <div class="rightitem"> <p>{{index.name}}</p> </div>
+              </div>
+              <ion-option-button   class="button-assertive icon ion-trash-a" ng-click="deleteProfile(index,'INSTITUTE')"></ion-option-button>
+              <ion-option-button   class="button-balanced icon ion-edit" ng-click="goToMyProfile(index, 'INSTITUTE')"></ion-option-button>
+            </ion-item>
+          </ion-list>
+          <!-- Tutors Profiles-->
+          <ion-list show-delete="false" can-swipe="true" ng-repeat="index in profiles_created_tut">
+            <ion-item style="height: 60px;">
+
+              <button click-for-options class="button button-icon icon ion-android-arrow-dropright item_options"></button>
+
+              <div class="container_ionitem" >
+                <div class="leftitem"><img src="img/teacher_profile_icon.png" style="width: 40px;height:40px;"></div>
+                <div class="rightitem"> <p>{{index.firstName}}</p> </div>
+              </div>
+              <ion-option-button  class="button-assertive icon ion-trash-a" ng-click="deleteProfile(index,'TUTOR')"></ion-option-button>
+              <ion-option-button  class="button-balanced icon ion-edit" ng-click="goToMyProfile(index,'TUTOR')"></ion-option-button>
+            </ion-item>
+          </ion-list>
 
         </div>
 

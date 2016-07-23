@@ -1,4 +1,4 @@
-<ion-view  hide-nav-bar="true">
+<ion-view  hide-nav-bar="true" cache-view="false">
     <ion-header-bar class="new-status-bar bar-positive">
         <div class="buttons">
             <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
@@ -48,7 +48,7 @@
         <ion-item ng-if="totalSelectedSubName.length > 0" class="txt_selsubhead">
           Selected Courses
         </ion-item>
-        <!--  -->
+
         <ion-item ng-repeat="item in totalSelectedSubName" class="txt_selcourses">
           {{ item }}
         </ion-item>

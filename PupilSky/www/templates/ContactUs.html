@@ -5,9 +5,11 @@
       <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
     </div>
 
+    <h1 class="title">Contact Us</h1>
+
   </ion-header-bar>
     <ion-content>
-      <div class="card">
+<!--      <div class="card">
           <div class="margin-left-10-px margin-top-10-px margin-bottom-20-px">
           <div>
               VKI Area ,Jaipur (Rajasthan)
@@ -18,6 +20,21 @@
 
           <div> Email : abc@gmail.com</div>
           </div>
-      </div>
+      </div>-->
+
+      <ion-item style="height: 60px;">
+        <div class="container_ionitem" >
+          <div class="leftitem"><i class="icon ion-android-call font-30 icon_color"></i></div>
+          <div class="rightitem" ><a   href="tel:+91-7290898751" target="_blank" style="padding-left: 10px;" >{{ourNumber}}</a> </div>
+        </div>
+      </ion-item>
+
+      <ion-item style="height: 60px;">
+        <div class="container_ionitem" >
+          <div class="leftitem"><i class="icon ion-android-mail font-30 icon_color" ></i></div>
+          <div class="rightitem" ng-click="supportMail()"> <p style="margin-bottom: 20px; padding-left: 10px;">support@pupilsky.com</p> </div>
+        </div>
+      </ion-item>
+
     </ion-content>
 </ion-view>

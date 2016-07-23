@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="true" cache-view="false">
     <ion-header-bar class="new-status-bar bar-positive">
         <div class="buttons">
             <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
@@ -16,5 +16,30 @@
                 Add Teachers
             </button>
         </div>
+
+
+      <div class="list" style="padding-top: 0px;margin-top: 10px">
+
+        <div ng-repeat="index in listInstituteCourses">
+          <a class="item item-coursename" style="padding-top: 10px;min-height: 30px;padding-left: 30px;">
+            <p>{{index.name}}</p>
+          </a>
+
+        </div>
+
+      </div>
+
+
     </ion-content>
+
+  <ion-footer-bar
+    class="footer-btn-bar">
+    <div class="row footer-btn-div" >
+      <div class="col app-bg-theme col-center text-center" style="padding: 10px" ng-click="submit()">
+        <span class="white-txt-color font-15">Submit</span>
+      </div>
+    </div>
+
+
+  </ion-footer-bar>
 </ion-view>

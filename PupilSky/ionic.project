@@ -1,4 +1,5 @@
 {
   "name": "PupilSky",
-  "app_id": ""
+  "app_id": "",
+  "defaultBrowser": "chrome"
 }

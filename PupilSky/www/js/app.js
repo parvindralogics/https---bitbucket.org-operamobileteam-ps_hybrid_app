@@ -4,49 +4,58 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','ngCordova','starter.controllers','starter.services','starter.ForgotPasswordController','starter.LoginController','starter.ManageProfileController','starter.OTPController','starter.RegistrationController','starter.SlideControllers','starter.SplashController'])
+angular.module('starter', ['ionic','ngCordova','starter.controllers','starter.directives','starter.services','starter.ForgotPasswordController','starter.LoginController','starter.ManageProfileController','starter.OTPController','starter.RegistrationController','starter.SlideControllers','starter.SplashController'
+,'starter.instituteControllers', 'starter.studentControllers', 'starter.myProfileController','starter.mainPageControllers', 'starter.tutorControllers','tabSlideBox','ionic-ratings'])
 
     .constant('HOST',"http://ec2-52-201-214-115.compute-1.amazonaws.com:8080/educators/api/v1/user/profile/")
     .constant('HOST_BASE',"http://ec2-52-201-214-115.compute-1.amazonaws.com:8080/educators/api/v1/")
+    .constant('HOST_IMAGES',"http://ec2-52-201-214-115.compute-1.amazonaws.com:8080/educators")
 
 
-.run(function($ionicPlatform,$rootScope, $state, HTTP) {
+.run(function($ionicPlatform,$rootScope, $state, HTTP, $ionicPopup, HOST_BASE, $cordovaEmailComposer) {
 
 
-/*  $rootScope.courseData = [{"course":"Class want to Teach"},{"course":"BA"},{"course":"BBA"},{"course":"BCA"}];
+   $rootScope.fistTimeLoginFlag       = false;
 
-  $rootScope.status_post = $rootScope.courseData[0];
+    $rootScope.allProfileReturned     = [];
 
-  $rootScope.subject =[{"subj":"math"},{"subj":"commerce"}];
+    $rootScope.profiles_created_stu   = [];
+    $rootScope.profiles_created_inst  = [];
+    $rootScope.profiles_created_tut   = [];
 
+    $rootScope.rootProfileMenuData = null;
 
-    $rootScope.hobbiesData=[{"hobbies":"play cricket"},{"hobbies":"play outdoor game"},{"hobbies":"play indoor game"}]
+    window.localStorage.setItem('loginFlag',$rootScope.fistTimeLoginFlag);
 
-  $rootScope.stateData = [{"state":"Choose state"},{"state":"Rajasthan"},{"state":"Delhi"},{"state":"MP"}];
+    var email = {
+      to: 'support@pupilsky.com',
+      subject: 'PupilSky Support',
+      body: 'We are happy',
+      isHtml: true
+    };
 
-  $rootScope.stateData_post = $rootScope.stateData[0];
+    $rootScope.supportMail = function() {
 
-  $rootScope.cityData = [{"city":"Choose city"},{"city":"Jaipur"},{"city":"Ajamer"},{"city":"Jodhopur"}];
+      $cordovaEmailComposer.isAvailable().then(function() {
+        console.log("is available");
 
-  $rootScope.cityData_post = $rootScope.cityData[0];
+        $cordovaEmailComposer.open(email).then(null, function () {
+          // user cancelled email
+        });
 
-  $rootScope.locationData = [{"location":"Choose Location"},{"location":"Jaipur"},{"location":"Ajamer"},{"location":"Jodhopur"}];
+      }, function () {
+        // not available
+      });
 
-  $rootScope.locationData_post = $rootScope.locationData[0];*/
+    }
 
-
-   $rootScope.fistTimeLoginFlag = false;
-
-        window.localStorage.setItem('loginFlag',$rootScope.fistTimeLoginFlag);
-
-        $rootScope.to = [{"id":"1","category":"+91"},{"id":"2","category":"+47"},{"id":"3","category":"+42"},{"id":"4","category":"+45"}];
+    $rootScope.to = [{"id":"1","category":"+91"},{"id":"2","category":"+47"},{"id":"3","category":"+42"},{"id":"4","category":"+45"}];
         $rootScope.status_post = $rootScope.to[0];
 
         $rootScope.selectedStatusCategory = function(id){
             $rootScope.selectedStatus = id;
             //alert($rootScope.selectedStatus);
         };
-
 
         $rootScope.positionAddress='';
 
@@ -88,9 +97,22 @@ angular.module('starter', ['ionic','ngCordova','starter.controllers','starter.se
         };
 
 
+    // all years
+
+    $rootScope.years = [];
+
+    $rootScope.getYears = function(){
+
+      for(var i = 1940; i < 2016; i++){
+
+        years.push[i];
+
+      }
+    };
+
     $rootScope.getCountryData = function(county_name){
 
-      $rootScope.url = "http://ec2-52-201-214-115.compute-1.amazonaws.com:8080/educators/api/v1/user/startup/retrieve/";
+      $rootScope.url = HOST_BASE+"/user/startup/retrieve/";
 
       HTTP.get($rootScope.url+county_name).success(function (response) {
 
@@ -105,10 +127,32 @@ angular.module('starter', ['ionic','ngCordova','starter.controllers','starter.se
       }).error(function (error, status) {
       });
 
+    };
+
+    $rootScope.GetUserAddress();
+
+    $rootScope.isNetworkConnected = function(){
+      if(window.Connection) {
+        if (navigator.connection.type == Connection.NONE) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+
     }
 
-
-        $rootScope.GetUserAddress();
+    $rootScope.networkPopup = function(){
+      $ionicPopup.confirm({
+        title: 'No Internet Connection',
+        content: 'Sorry, no Internet connectivity detected.'
+      })
+        .then(function(result) {
+          if(!result) {
+            ionic.Platform.exitApp();
+          }
+        });
+    }
 
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -121,6 +165,20 @@ angular.module('starter', ['ionic','ngCordova','starter.controllers','starter.se
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
+    }
+
+    if(window.Connection) {
+      if(navigator.connection.type == Connection.NONE) {
+        $ionicPopup.confirm({
+          title: 'No Internet Connection',
+          content: 'Sorry, no Internet connectivity detected.'
+        })
+          .then(function(result) {
+            if(!result) {
+              ionic.Platform.exitApp();
+            }
+          });
+      }
     }
 
   });
@@ -150,8 +208,6 @@ angular.module('starter', ['ionic','ngCordova','starter.controllers','starter.se
             }
 
         }, 100);
-
-
 
     })
 
@@ -244,6 +300,7 @@ angular.module('starter', ['ionic','ngCordova','starter.controllers','starter.se
       }
 
     })
+
     .state('app.mainPage', {
       url: '/mainPage',
       views: {
@@ -252,8 +309,18 @@ angular.module('starter', ['ionic','ngCordova','starter.controllers','starter.se
           controller: 'mainPageCtrl'
         }
       }
-
     })
+
+    .state('app.mainPageDetail', {
+      url: '/mainPageDetail',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/home_detail.html',
+          controller: 'mainPageDetailCtrl'
+        }
+      }
+    })
+
     .state('app.tutorInfo', {
       url: '/tutorInfo',
       views: {
@@ -274,6 +341,18 @@ angular.module('starter', ['ionic','ngCordova','starter.controllers','starter.se
       }
 
     })
+
+    .state('app.tutorAddress', {
+      url: '/tutorAddress',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/TeacherAddress.html',
+          controller: 'teacherAddressCtrl'
+        }
+      }
+
+    })
+
     .state('app.createStudentProfileSection1', {
       url: '/createStudentProfileSection1',
       views: {
@@ -515,7 +594,7 @@ angular.module('starter', ['ionic','ngCordova','starter.controllers','starter.se
       })
   ;
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/SplashScreen');
+  $urlRouterProvider.otherwise('/loginScreen');
   $ionicConfigProvider.navBar.alignTitle("center");
   /*$ionicConfigProvider.form.checkbox("square");*/
 });

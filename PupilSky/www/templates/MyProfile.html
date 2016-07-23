@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="true" cache-view="false">
     <ion-header-bar class="new-status-bar bar-positive">
         <div class="buttons">
             <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
@@ -9,21 +9,18 @@
 
     <ion-content>
 
-        <div class="app-bg-theme padding-20-px" align="center">
+<!--        <div class="app-bg-theme padding-20-px" align="center">
             <div class=" width-100-per">
-                <img src="img/user_default_icon.png" class="width-80-px height-80-px border-radius-50-per">
+              &lt;!&ndash;  <img src="img/user_default_icon.png" class="width-80-px height-80-px border-radius-50-per">&ndash;&gt;
+                <img ng-src="{{pro_image}}" no-image-update class="width-80-px height-80-px border-radius-50-per">
                 <br>
             </div>
-            <!-- <div>
-                 <select class="border-0-px white-txt-color app-bg-theme"  >
-                     <option selected>Parvindra Singh</option>
-                     <option>Ravi</option>
-                 </select></div>-->
+
             <div align="center">
-                <img src="img/takepic.png" style="width: 40px;height: 40px;" class="margin-right-10-px">
-                <img src="img/galleryicon.png" style="width: 37px;height: 37px;" class="margin-left-10-px">
+                <img src="img/takepic.png" style="width: 40px;height: 40px;" class="margin-right-10-px" ng-click="GetImageFromCamera()">
+                <img src="img/galleryicon.png" style="width: 37px;height: 37px;" class="margin-left-10-px"ng-click="choosePhoto()">
             </div>
-        </div>
+        </div>-->
 
         <div align="center">
 
@@ -31,7 +28,7 @@
 
                 <label class="item item-input item-stacked-label  item-borderless width-100-per input_field_label">
                     <span class="input-label app_txt_color input-label-txt-font">Name</span>
-                    <input type="text" class="padding-right-5px" value="Parvindra singh">
+                    <input type="text" class="padding-right-5px" ng-model="myprofileobj.name">
                 </label>
 
                 </div>
@@ -39,31 +36,28 @@
             <div class="field_screen" align="left">
                 <label class="item item-input item-stacked-label item-borderless width-100-per input_field_label" >
                     <span class="input-label app_txt_color input-label-txt-font">Email</span>
-                    <input type="Email"  class="padding-right-5px" value="acb@gmail.com">
+                    <input type="Email"  class="padding-right-5px" ng-model="myprofileobj.email" disabled="true">
                 </label>
             </div>
 
             <div class="field_screen" align="left">
                 <label class="item item-input item-stacked-label item-borderless width-100-per input_field_label">
-                    <span class="input-label app_txt_color input-label-txt-font">About me</span>
-                    <textarea aria-multiline="10"  class="padding-right-5px "> I am a teacher</textarea>
+                    <span class="input-label app_txt_color input-label-txt-font">Contact No</span>
+                    <textarea aria-multiline="10"  class="padding-right-5px " ng-model="myprofileobj.contact" disabled="true"> </textarea>
                 </label>
             </div>
-
-
             </div>
 
     </ion-content>
 
     <ion-footer-bar
             style="background-color: #ffffff !important;padding: 0px ! important;background-position:center;border-top-width: 0px !important;">
-        <div class="row" style="padding:0px;border: 0px !important;display: -webkit-box;" ng-click="update()">
+     <!--   <div class="row" style="padding:0px;border: 0px !important;display: -webkit-box;" ng-click="updateProfile()">-->
+        <div class="row" style="padding:0px;border: 0px !important;display: -webkit-box;" ng-click="updateProfile()">
             <div class="col app-bg-theme col-center text-center" style="padding: 10px">
                 <span class="white-txt-color font-15" >Update</span>
             </div>
         </div>
 
-
     </ion-footer-bar>
-
 </ion-view>

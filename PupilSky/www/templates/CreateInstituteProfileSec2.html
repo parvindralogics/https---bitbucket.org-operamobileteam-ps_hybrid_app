@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="true" cache-view="false">
     <ion-header-bar class="new-status-bar bar-positive">
         <div class="buttons">
             <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
@@ -9,58 +9,45 @@
 
 
     <ion-content>
-        <!--<div align="center" class="margin-top-10-px">
-          <div align="left" class="app_txt_color " style="width: 80% !important;font-size: 15px;"><samp>Personal
-            Information</samp></div>
-        </div>-->
+
         <div align="center">
 
-
-            <!-- <div class="login_screen_field_div margin-top-20-px" align="center">
-               <div class="field_icon_div"><i class="login_screen_field_img icon  ion-person green-txt-color font-25"></i>
-               </div>
-               <div class="Aligner"><input type="text" placeholder="Teacher name" class="input_filed"></div>
-             </div>-->
 
             <div class="field_screen" align="left">
                 <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
                     <span class="input-label app_txt_color input-label-txt-font">Teacher name</span>
-                    <input type="text" placeholder="Teacher name" class="padding-right-5px">
+                    <input type="text" placeholder="Teacher name" class="padding-right-5px" ng-model="insTeacher.name">
                 </label>
             </div>
 
-
-            <!--  <div class="login_screen_field_div" align="center">
-                <div class="field_icon_div"><i class="login_screen_field_img icon  ion-ribbon-a green-txt-color font-25"></i>
-                </div>
-                <div class="Aligner"><input type="text" placeholder="Highest Qualification" class="input_filed"></div>
-              </div>-->
 
             <div class="field_screen" align="left">
                 <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
                     <span class="input-label app_txt_color input-label-txt-font">Highest Qualification</span>
-                    <input type="text" placeholder="Highest Qualification" class="padding-right-5px">
+                    <input type="text" placeholder="Highest Qualification" class="padding-right-5px" ng-model="insTeacher.qualification">
                 </label>
             </div>
 
+          <div class="field_screen " align="center">
 
-            <!-- <div class="login_screen_field_div" align="center">
-               <div class="Aligner"><textarea  placeholder="About me" class="input_filed padding-top"></textarea></div>
-             </div>-->
+            <div class="Aligner padding-top padding-bottom">
+              <select class="width-100-per white_bg_color border-0-px " ng-model="modelUniv.id" ng-options="university.id as university.name for university in universityData"
+                >
+                <option value="" selected="selected">University</option>
+              </select>
+            </div>
+
+          </div>
 
             <div class="field_screen" align="left">
                 <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
                     <span class="input-label app_txt_color input-label-txt-font">About me</span>
-                    <textarea aria-multiline="10" placeholder="About me" class="padding-right-5px "></textarea>
+                    <textarea aria-multiline="10" placeholder="About me" class="padding-right-5px " ng-model="insTeacher.aboutMe"></textarea>
                 </label>
             </div>
 
         </div>
-        <!-- <div align="center">
-           <button class="button button-full button-positive" style="width: 50%!important;border-radius: 4px !important;"
-                   ng-click="next()">Next
-           </button>
-         </div>-->
+
     </ion-content>
 
     <ion-footer-bar

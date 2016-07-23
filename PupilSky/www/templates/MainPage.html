@@ -1,8 +1,94 @@
-<ion-view view-title="Home" hide-back-button="true">
-  <ion-content align="center">
+<ion-view view-title="Home" hide-back-button="true" cache-view="false">
+
+  <ion-header-bar>
+
+    <div class="margin-top-40px" >
+      <ion-scroll direction="x" style="margin-left: -5px;margin-right: -5px;" delegate-handle="tab_scroll">
+        <div class="slider-shows">
+          <a   ng-repeat="tab in otherTabsList track by $index"  ng-if="tab.length != 0" ng-click="onClickTabItem(tab, $index)" class="image-list-thumb"
+               ng-class="{'image-list-thumb_selected':$index == isSelected}">{{tab}}</a>
+        </div>
+      </ion-scroll>
+    </div>
 
 
-    <p class="login_name">Home in Progress</p>
+  </ion-header-bar>
+
+  <ion-content >
+
+  <div style="margin-top: 50px;">
+    <ion-list ng-repeat="index in listHomeProfiles" >
+      <!--<span class="rating-text">4.59</span>-->
+      <div style="border-bottom: 1px solid #DDDCE1;" ng-click="goHomeDetail(index)">
+        <div class="row">
+          <div class="col col-75 title-name">{{index.category}} {{index.name}}{{index.firstName}} </div>
+          <div class="col text-center">
+
+          </div>
+        </div>
+
+        <div >
+          <span class="address-text">{{index.address.state.name}}</span>
+        </div>
+
+        <div style=" margin-left: 10px; margin-top: 5px;">
+          <span class="description-text">{{index.subCategory}}</span><br>
+          <span class="description-text; margin-top: 5px;">{{index.body}}</span><br>
+         <!-- <span class="description-text">1000 Per Student Fees</span>-->
+        </div>
+
+        <div style="margin-left: 10px; ">
+          <span class="ion-arrow-return-left direction-icon"></span>
+          <span class="direction-text">&nbsp;&nbsp;4.5 Km</span>
+        </div>
+
+        <div style="margin-left: 10px; margin-top: 12px;">
+          <span class="">
+              <img style="width: 25px;" src="img/phone.png">
+          </span>
+          <span style="margin-left: 10px;">
+              <img style="width: 25px;" src="img/message.png">
+          </span>
+        </div>
+
+        <!-- slider -->
+        <div style="margin-left: 10px;" class="margin-top-20" >
+          <ion-scroll direction="x">
+            <div class="slider-shows">
+
+              <img ng-repeat="image in profileSliderImage" ng-src="{{image.img}}"
+                   class="image-list-thumb"/>
+
+            </div>
+          </ion-scroll>
+        </div>
+
+        <div style="margin-left: 10px; margin-top: 12px;">
+          <span class="">
+              <img style="width: 100px;" src="img/star.png">
+          </span>
+        </div>
+
+        <!-- <div style="margin-left: 10px; margin-top: 12px;">
+             <span class="">
+                 <img style="width: 28px;" src="img/online_icon.png">
+             </span>
+             <span class="direction-text">Online Payment Available</span>
+         </div>-->
+
+        <div class="row">
+          <div class="">
+            <img style="width: 28px;" src="img/online_icon.png">
+          </div>
+          <div class="col col-75 direction-text">
+            <span>Online Payment Available</span>
+          </div>
+        </div>
+
+      </div>
+
+    </ion-list>
+</div>
 
   </ion-content>
 

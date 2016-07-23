@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="true" cache-view="false">
     <ion-header-bar class="new-status-bar bar-positive">
         <div class="buttons">
             <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
@@ -11,43 +11,62 @@
     <ion-content>
         <div align="center">
 
-            <div class="field_screen " align="center">
-                <div class="Aligner padding-top padding-bottom"><select ng-model="stateData_post"
-                                                                        class="width-100-per white_bg_color border-0-px "
-                                                                        ng-options="toData as toData.state for toData in stateData"
-                                                                        ng-change="selectedStatusCategory(stateData_post.state)">
-                </select></div>
+          <div class="field_screen " align="center" >
+
+            <!--<input type="text" placeholder="Name" class="padding-right-5px" ng-model="inststate_model.name" ng-if="isEditMode" ng-click="changeEditMode()">-->
+
+              <select class="width-100-per white_bg_color border-0-px " ng-model="inststate_model.id" ng-options="state.id as state.name for state in statesData"
+                      ng-change = "selectState()" >
+
+                <option value="" selected="selected">Select State</option>
+              </select>
+          </div>
+
             </div>
 
+      <div align="center">
+              <div class="field_screen" align="center" >
+                <div class="Aligner padding-top padding-bottom">
 
-            <div class="field_screen" align="center">
-                <div class="Aligner padding-top padding-bottom"><select ng-model="cityData_post"
-                                                                        class="width-100-per white_bg_color border-0-px "
-                                                                        ng-options="toData as toData.city for toData in cityData"
-                                                                        ng-change="selectedStatusCategory(cityData_post.city)">
-                </select></div>
-            </div>
+                  <!--<input type="text" placeholder="Name" class="padding-right-5px" ng-model="instcity_model.name" ng-if="isEditMode" ng-click="changeEditMode()">-->
+                  <select class="width-100-per white_bg_color border-0-px " ng-model="instcity_model.id" ng-options="city.id as city.name for city in cityData"
+                          ng-change = "selectCity()" >
 
+                    <option value="" selected="selected">Select City</option>
+                  </select>
+                </div>
+              </div>
+    </div>
 
-            <div class="field_screen" align="center">
-                <div class="Aligner" style="padding-top: 8px;padding-bottom: 8px"><select ng-model="locationData_post"
-                                                                                          class="width-100-per white_bg_color border-0-px"
-                                                                                          ng-options="toData as toData.location for toData in locationData"
-                                                                                          ng-change="selectedStatusCategory(locationData.location)">
-                </select></div>
-            </div>
+      <div align="center">
 
+              <div class="field_screen" align="center" >
 
-            <div class="field_screen" align="left">
-                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label">
-                    <span class="input-label app_txt_color input-label-txt-font">Street Address(optional)</span>
-                    <textarea aria-multiline="10" placeholder="Street Address(optional)"
-                              class="padding-right-5px "></textarea>
-                </label>
-            </div>
+                <div class="Aligner padding-top padding-bottom">
+<!--
+                  <input type="text" placeholder="Name" class="padding-right-5px" ng-model="instarea_model.name" ng-if="isEditMode==true" ng-click="changeEditMode()">
+-->
+                  <select class="width-100-per white_bg_color border-0-px " ng-model="instarea_model.id" ng-options="area.id as area.name for area in areaData"
+                          ng-change = "selectArea()" >
 
+                    <option value="" selected="selected">Select Location</option>
+                  </select>
+                </div>
+
+              </div>
 
         </div>
+
+      <div align="center">
+
+              <div class="field_screen" align="center">
+                <label class="item item-input item-floating-label item-borderless width-100-per input_field_label" >
+                  <span class="input-label app_txt_color input-label-txt-font">Street Address(optional)</span>
+                  <textarea  aria-multiline="10" placeholder="Street Address(optional)" class="padding-right-5px " ng-model="instAddress.address_txt"></textarea>
+                </label>
+              </div>
+        </div>
+
 
     </ion-content>
 

@@ -1,7 +1,7 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="true" cache-view="false">
 
     <ion-header-bar class="new-status-bar bar-positive">
-        <div class="buttons">
+        <div class="buttons" >
             <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
         </div>
         <h1 class="title">Location</h1>
@@ -13,13 +13,16 @@
              <div class="Aligner" style="padding-top: 8px;padding-bottom: 8px"><select  ng-model="stateData_post" class="width-100-per white_bg_color border-0-px placeholder-color" ng-options="toData as toData.state for toData in stateData" ng-change="selectedStatusCategory(stateData_post.state)">
              </select></div>
          </div>-->
-
-
             <div class="field_screen " align="center" >
 
               <div class="Aligner padding-top padding-bottom">
+
+<!--
+                <input type="text" placeholder="Name" class="padding-right-5px" ng-model="state_model.name" ng-if="isEditMode" ng-click="changeEditMode()">
+-->
+
                 <select class="width-100-per white_bg_color border-0-px " ng-model="state_model.id" ng-options="state.id as state.name for state in statesData"
-                        ng-change = "selectState()">
+                        ng-change = "selectState('SELECTION')" >
 
                   <option value="" selected="selected">Select State</option>
                 </select>
@@ -27,25 +30,32 @@
             </div>
       </div>
 
-
       <div align="center">
           <div class="field_screen" align="center" >
             <div class="Aligner padding-top padding-bottom">
+
+              <!--<input type="text" placeholder="Name" class="padding-right-5px" ng-model="city_model.name" ng-if="isEditMode" ng-click="changeEditMode()">-->
+
+
               <select class="width-100-per white_bg_color border-0-px " ng-model="city_model.id" ng-options="city.id as city.name for city in cityData"
-                      ng-change = "selectCity()">
+                      ng-change = "selectCity()" >
 
                 <option value="" selected="selected">Select City</option>
               </select>
             </div>
           </div>
-</div>
+    </div>
 
       <div align="center">
           <div class="field_screen" align="center" >
 
             <div class="Aligner padding-top padding-bottom">
+
+              <!--<input type="text" placeholder="Name" class="padding-right-5px" ng-model="area_model.name" ng-if="isEditMode==true" ng-click="changeEditMode()">-->
+
+
               <select class="width-100-per white_bg_color border-0-px " ng-model="area_model.id" ng-options="area.id as area.name for area in areaData"
-                      ng-change = "selectArea()">
+                      ng-change = "selectArea()" >
 
                 <option value="" selected="selected">Select Location</option>
               </select>

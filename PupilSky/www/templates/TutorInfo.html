@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view hide-nav-bar="true" cache-view="false">
     <ion-header-bar class="new-status-bar bar-positive">
         <div class="buttons">
             <button class="button button-clear ion-chevron-left" ng-click="goBackFunction()">&nbsp;&nbsp;Back</button>
@@ -13,9 +13,18 @@
 
           <div class="field_screen " align="center">
 
-            <div class="Aligner padding-top padding-bottom" ng-click="openCoursesModal()">
+<!--            <div class="Aligner padding-top padding-bottom" ng-click="openCoursesModal()">
 
               <button type="text" class="button_selcourses" > Select Courses</button>
+
+            </div>-->
+
+            <div class="Aligner padding-top padding-bottom">
+              <select class="width-100-per white_bg_color border-0-px " ng-model="model.id" ng-options="note.id as note.name for note in studentCourseData"
+                      ng-change = "selectCourse()">
+
+                <option value="" selected="selected">Select Course</option>
+              </select>
 
             </div>
 

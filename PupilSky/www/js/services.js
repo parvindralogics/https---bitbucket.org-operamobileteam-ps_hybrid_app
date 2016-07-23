@@ -131,7 +131,7 @@ angular.module('starter.services', [])
             });
             return promise;
           },
-            uploadUsingDevice : function(url,file,params,access_token){
+            uploadUsingDevice : function(url,file,params,access_token, user_type){
               $ionicLoading.show();
                 // alert(JSON.stringify(params));
                 var options = new FileUploadOptions();
@@ -145,9 +145,24 @@ angular.module('starter.services', [])
                     $ionicLoading.hide();
 
                   console.log(success);
-                  window.localStorage.setItem("STU_PROF_RES", JSON.stringify(success.response));
+
+                  if(user_type == "TUTOR"){
+                    console.log("in tutor");
+                    window.localStorage.setItem("TUTER_PROF_RES", JSON.stringify(success));
+                  }else if(user_type == "STUDENT"){
+                    console.log("in student");
+                    window.localStorage.setItem("STU_PROF_RES", JSON.stringify(success));
+                  }else if(user_type == "INSTITUTE"){
+                    console.log("in institute");
+                    window.localStorage.setItem("INS_PROF_RES", JSON.stringify(success));
+                  }else if(user_type == "UPDATE_PROFILE"){
+                    console.log("in update");
+                    window.localStorage.setItem("UPDATE_PROF_RES", JSON.stringify(success));
+                  }
+
                 }, function(err){
                     $ionicLoading.hide();
+                  console.log(err);
                      alert("Something went wrong");
                 }, options);
             }
@@ -159,6 +174,12 @@ angular.module('starter.services', [])
         noImageUrl: "img/dummy_profile_pic.png"
     };
 })
+
+  .factory('updateNoImage', function() {
+    return {
+      noImageUrl: "img/user_default_icon.png"
+    };
+  })
 
   .factory('settings_noImage', function() {
     return {
